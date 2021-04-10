@@ -2,6 +2,9 @@
   padding: 10px 20px;
   font-size: 20px;
 }
+.navdiv {
+  margin-left: 45 px;
+}
 
 .button-container {
   display: flex;
@@ -28,20 +31,21 @@
   line-height: 2;
 }
 .tweetSpan {
-  background: currentColor;
+  background: rgb(29, 161, 242);
   border-radius: 100px;
   width: 201px;
 }
 .tweetspantext {
   color: white;
-  margin-left: 70px;
+
+  text-align: center;
   font-weight: 500;
   font-size: 15px;
   line-height: 10px;
 }
 .tweeteSpan {
   margin-left: auto;
-  background: currentColor;
+  background: rgb(29, 161, 242);
   border-radius: 100px;
   width: 100px;
   height: 37px;
@@ -54,7 +58,7 @@
   line-height: 10px;
 }
 .homepage {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 19px;
   font-weight: 900;
 }
