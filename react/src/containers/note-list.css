@@ -1,9 +1,31 @@
 .container {
-  padding: 10px 20px;
-  font-size: 20px;
 }
-.navdiv {
-  margin-left: 45 px;
+.navbarr {
+  margin-left: 39px;
+  margin-top: 12px;
+}
+.navlink {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  width: 234.2px;
+  margin-left: 37px;
+  margin-top: 29px;
+}
+.navlink:hover {
+  background: rgb(161, 208, 236);
+  border-radius: 20px;
+  color: #1da1f2;
+}
+.nav-img-text {
+  display: flex;
+  margin-left: 5px;
+}
+
+.nav-text {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .button-container {
@@ -19,37 +41,31 @@
   padding: 10px;
   align-items: center;
 }
-.nav-img-text {
-  display: flex;
-}
-.nav-text {
-  margin-left: 20px;
-  color: black;
-  font-weight: 700;
-}
-.navbar-nav {
-  line-height: 2;
-}
+
 .tweetSpan {
   background: rgb(29, 161, 242);
   border-radius: 100px;
-  width: 201px;
-}
-.tweetspantext {
-  color: white;
-
+  width: 226px;
+  height: 48px;
   text-align: center;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 10px;
+  margin-left: -13px;
+  margin-top: -8px;
 }
-.tweeteSpan {
-  margin-left: auto;
+.navlinkt {
+  margin-top: 22px;
+  margin-left: 27px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
   background: rgb(29, 161, 242);
   border-radius: 100px;
-  width: 100px;
-  height: 37px;
+  justify-content: center;
+  height: 47px;
+  width: 227px;
+  border: none;
 }
+
 .tweetespantext {
   color: white;
   margin-left: 23px;
@@ -57,6 +73,24 @@
   font-size: 15px;
   line-height: 10px;
 }
+
+.btn.btn-xlg {
+  margin-top: 110px;
+  margin-left: 25px;
+  display: flex;
+}
+.btn.btn-xlg :hover {
+  background: rgb(177, 195, 196);
+}
+.user {
+  margin-left: 15px;
+  margin-top: -10px;
+}
+.more {
+  margin-left: 100px;
+  margin-top: 6px;
+}
+
 .homepage {
   font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 19px;
