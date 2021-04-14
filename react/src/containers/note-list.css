@@ -52,8 +52,8 @@
   margin-top: -8px;
 }
 .navlinkt {
-  margin-top: 22px;
-  margin-left: 27px;
+  margin-top: 8%;
+  margin-left: 10%;
   color: white;
   text-decoration: none;
   font-size: 15px;
@@ -75,8 +75,8 @@
 }
 
 .btn.btn-xlg {
-  margin-top: 110px;
-  margin-left: 25px;
+  margin-top: 40%;
+  margin-left: 10%;
   display: flex;
 }
 .btn.btn-xlg :hover {
@@ -89,6 +89,9 @@
 .more {
   margin-left: 100px;
   margin-top: 6px;
+}
+.navdiv {
+  position: fixed;
 }
 
 .homepage {
