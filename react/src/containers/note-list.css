@@ -75,9 +75,10 @@
 }
 
 .btn.btn-xlg {
-  margin-top: 40%;
-  margin-left: 10%;
   display: flex;
+  position: absolute;
+  bottom: 0px;
+  margin-left: 11%;
 }
 .btn.btn-xlg :hover {
   background: rgb(177, 195, 196);
@@ -92,6 +93,7 @@
 }
 .navdiv {
   position: fixed;
+  height: 100%;
 }
 
 .homepage {
