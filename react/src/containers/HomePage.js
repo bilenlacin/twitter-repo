@@ -563,7 +563,7 @@ class HomePage extends React.Component {
             <div className='search'>
               <nav class='navbar navbar-light bg-light'>
                 <form class='form-inline'>
-                  <img src='icons/search.svg' width='25' alt='' />
+                  <img src='icons/search.svg' width='24' alt='' />
                   <input
                     class='form-control mr-sm-2'
                     type='search'
