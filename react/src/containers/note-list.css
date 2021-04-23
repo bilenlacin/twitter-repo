@@ -95,11 +95,61 @@
   position: fixed;
   height: 100%;
 }
-
+.maincol {
+  margin-left: 9.3%;
+  width: 80.5%;
+}
 .homepage {
   font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 900;
+}
+.mainpage {
+  padding-right: 16px;
+  padding-left: 16px;
+  border-bottom: 1px solid rgb(235, 238, 240);
+  border-right: 1px solid rgb(235, 238, 240);
+  border-left: 1px solid rgb(235, 238, 240);
+  display: flex;
+  height: 50px;
+}
+
+.tweetbar {
+  margin-top: 0.5%;
+  height: 178px;
+}
+.homepageicon {
+  margin-left: auto;
+}
+#comment {
+  border: none;
+}
+.interesting {
+  display: flex;
+}
+.interestingimg {
+  margin-left: auto;
+}
+.tweetdiv {
+  width: 86%;
+}
+.tweetabout {
+  margin-left: -4%;
+  display: flex;
+}
+.tweety {
+  background: rgb(29, 161, 242);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  width: 88px;
+  height: 39px;
+  margin-left: 39.8%;
+  margin-top: 1%;
+}
+.tweetaboutdiv {
+  margin-right: 22px;
+  display: flex;
 }
 .tweetimage {
   max-width: 100%;
@@ -120,35 +170,52 @@
 .username {
   font-size: 15px;
   font-weight: 700;
+  margin-left: 5%;
+}
+.userm {
+  font-weight: 100;
 }
 .article {
   font-size: 15px;
+  margin-left: 5%;
 }
 .thumbnail {
   text-align: center;
   border: 1px solid rgb(235, 238, 240);
   border-radius: 20px;
+  margin-left: 4%;
+  height: 282px;
 }
 .inputdiv {
   border: 1px solid rgb(235, 238, 240);
+  height: 130px;
+}
+.form-control-placeholder {
+  font-size: 16px;
 }
 .brace {
-  border-top-style: solid;
-  background: rgb(235, 238, 240);
-  height: 12px;
-  border-top-color: rgb(235, 238, 240);
+  background: rgb(247, 249, 250);
+  height: 10px;
+
+  border-top: 1px solid rgb(235, 238, 240);
 }
 
 .tweet {
   display: block;
   border: 1px solid rgb(235, 238, 240);
 }
+.tweetprofileimg {
+  margin-left: 50%;
+  margin-top: 50%;
+}
 .tweetbtn {
   margin-left: 100px;
 }
 .abouttweetbtn {
-  font-size: 15px;
-  margin-top: 8px;
+  font-size: 12px;
+  margin-top: 4px;
+  color: grey;
+  margin-left: 9px;
 }
 .form-control {
   border-radius: 30px;
