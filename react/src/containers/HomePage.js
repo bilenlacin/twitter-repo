@@ -560,152 +560,161 @@ class HomePage extends React.Component {
             </div>
           </div>
           <div class='col'>
-            <div className='search'>
-              <nav class='navbar navbar-light bg-light'>
-                <form class='form-inline'>
-                  <img src='icons/search.svg' width='25' alt='' />
+            <div className='rightdiv'>
+              <div className='search'>
+                <div className='searchbar'>
+                  <img
+                    src='icons/search.svg'
+                    width='18'
+                    alt=''
+                    style={{ marginLeft: '15px' }}
+                  />
+
                   <input
-                    class='form-control mr-sm-2'
+                    class='form-control mr-sm-2 '
+                    id='searchinput'
                     type='search'
                     placeholder="Twitter'da ara"
                     aria-label='search'
                   />
-                </form>
-              </nav>
-            </div>
-            <div className='daily'>
-              <div className='interesting'>
-                <h5>İlgini çekebilecek gündemler</h5>
-                <div className='interestingimg'>
-                  <a href='/settings'>
-                    <img src='/icons/settings.svg' alt='' />
-                  </a>
                 </div>
               </div>
-              <div className='daily-news'>
-                <div className='news'>
-                  <div className='talksonwhere'>
-                    <span className='where'>Türkiye Konumunda Gündemde</span>
-                  </div>
-                  <div className='talkswhat'>
-                    <span className='what'>
-                      <b>Akşener</b>{' '}
-                    </span>
-                  </div>
-                  <div className='howmanytweet'>
-                    <span className='howmany'>12,5 B Tweet</span>
+              <div className='daily'>
+                <div className='interesting'>
+                  <span class='interestingtext'>
+                    İlgini çekebilecek gündemler
+                  </span>
+                  <div className='interestingimg'>
+                    <a href='/settings'>
+                      <img src='/icons/settings.svg' alt='' />
+                    </a>
                   </div>
                 </div>
-                <div className='tweetmore'>
-                  <a href='/more'>
-                    <img src='icons/threedot.svg' alt='' width='25px' />
-                  </a>
+                <div className='daily-news'>
+                  <div className='news'>
+                    <div className='talksonwhere'>
+                      <span className='where'>Türkiye Konumunda Gündemde</span>
+                    </div>
+                    <div className='talkswhat'>
+                      <span className='what'>
+                        <b>Akşener</b>{' '}
+                      </span>
+                    </div>
+                    <div className='howmanytweet'>
+                      <span className='howmany'>12,5 B Tweet</span>
+                    </div>
+                  </div>
+                  <div className='tweetmore'>
+                    <a href='/more'>
+                      <img src='icons/threedot.svg' alt='' width='25px' />
+                    </a>
+                  </div>
+                </div>
+                <div className='daily-news'>
+                  <div className='news'>
+                    <div className='talksonwhere'>
+                      <span className='where'>Türkiye Konumunda Gündemde</span>
+                    </div>
+                    <div className='talkswhat'>
+                      <span className='what'>
+                        <b>Akşener</b>{' '}
+                      </span>
+                    </div>
+                    <div className='howmanytweet'>
+                      <span className='howmany'>12,5 B Tweet</span>
+                    </div>
+                  </div>
+                  <div className='tweetmore'>
+                    <a href='/more'>
+                      <img src='icons/threedot.svg' alt='' width='25px' />
+                    </a>
+                  </div>
+                </div>
+                <div className='daily-news'>
+                  <div className='news'>
+                    <div className='talksonwhere'>
+                      <span className='where'>Türkiye Konumunda Gündemde</span>
+                    </div>
+                    <div className='talkswhat'>
+                      <span className='what'>
+                        <b>Akşener</b>{' '}
+                      </span>
+                    </div>
+                    <div className='howmanytweet'>
+                      <span className='howmany'>12,5 B Tweet</span>
+                    </div>
+                  </div>
+                  <div className='tweetmore'>
+                    <a href='/more'>
+                      <img src='icons/threedot.svg' alt='' width='25px' />
+                    </a>
+                  </div>
+                </div>
+                <div className='daily-news'>
+                  <div className='news'>
+                    <div className='talksonwhere'>
+                      <span className='where'>Türkiye Konumunda Gündemde</span>
+                    </div>
+                    <div className='talkswhat'>
+                      <span className='what'>
+                        <b>Akşener</b>{' '}
+                      </span>
+                    </div>
+                    <div className='howmanytweet'>
+                      <span className='howmany'>12,5 B Tweet</span>
+                    </div>
+                  </div>
+                  <div className='tweetmore'>
+                    <a href='/more'>
+                      <img src='icons/threedot.svg' alt='' width='25px' />
+                    </a>
+                  </div>
+                </div>
+                <div className='daily-news'>
+                  <div className='news'>
+                    <div className='talksonwhere'>
+                      <span className='where'>Türkiye Konumunda Gündemde</span>
+                    </div>
+                    <div className='talkswhat'>
+                      <span className='what'>
+                        <b>Akşener</b>{' '}
+                      </span>
+                    </div>
+                    <div className='howmanytweet'>
+                      <span className='howmany'>12,5 B Tweet</span>
+                    </div>
+                  </div>
+                  <div className='tweetmore'>
+                    <a href='/more'>
+                      <img src='icons/threedot.svg' alt='' width='25px' />
+                    </a>
+                  </div>
+                </div>
+                <div className='daily-news'>
+                  <div className='news'>
+                    <div className='talksonwhere'>
+                      <span className='where'>Türkiye Konumunda Gündemde</span>
+                    </div>
+                    <div className='talkswhat'>
+                      <span className='what'>
+                        <b>Akşener</b>{' '}
+                      </span>
+                    </div>
+                    <div className='howmanytweet'>
+                      <span className='howmany'>12,5 B Tweet</span>
+                    </div>
+                  </div>
+                  <div className='tweetmore'>
+                    <a href='/more'>
+                      <img src='icons/threedot.svg' alt='' width='25px' />
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div className='daily-news'>
-                <div className='news'>
-                  <div className='talksonwhere'>
-                    <span className='where'>Türkiye Konumunda Gündemde</span>
-                  </div>
-                  <div className='talkswhat'>
-                    <span className='what'>
-                      <b>Akşener</b>{' '}
-                    </span>
-                  </div>
-                  <div className='howmanytweet'>
-                    <span className='howmany'>12,5 B Tweet</span>
-                  </div>
-                </div>
-                <div className='tweetmore'>
-                  <a href='/more'>
-                    <img src='icons/threedot.svg' alt='' width='25px' />
-                  </a>
-                </div>
-              </div>
-              <div className='daily-news'>
-                <div className='news'>
-                  <div className='talksonwhere'>
-                    <span className='where'>Türkiye Konumunda Gündemde</span>
-                  </div>
-                  <div className='talkswhat'>
-                    <span className='what'>
-                      <b>Akşener</b>{' '}
-                    </span>
-                  </div>
-                  <div className='howmanytweet'>
-                    <span className='howmany'>12,5 B Tweet</span>
-                  </div>
-                </div>
-                <div className='tweetmore'>
-                  <a href='/more'>
-                    <img src='icons/threedot.svg' alt='' width='25px' />
-                  </a>
-                </div>
-              </div>
-              <div className='daily-news'>
-                <div className='news'>
-                  <div className='talksonwhere'>
-                    <span className='where'>Türkiye Konumunda Gündemde</span>
-                  </div>
-                  <div className='talkswhat'>
-                    <span className='what'>
-                      <b>Akşener</b>{' '}
-                    </span>
-                  </div>
-                  <div className='howmanytweet'>
-                    <span className='howmany'>12,5 B Tweet</span>
-                  </div>
-                </div>
-                <div className='tweetmore'>
-                  <a href='/more'>
-                    <img src='icons/threedot.svg' alt='' width='25px' />
-                  </a>
-                </div>
-              </div>
-              <div className='daily-news'>
-                <div className='news'>
-                  <div className='talksonwhere'>
-                    <span className='where'>Türkiye Konumunda Gündemde</span>
-                  </div>
-                  <div className='talkswhat'>
-                    <span className='what'>
-                      <b>Akşener</b>{' '}
-                    </span>
-                  </div>
-                  <div className='howmanytweet'>
-                    <span className='howmany'>12,5 B Tweet</span>
-                  </div>
-                </div>
-                <div className='tweetmore'>
-                  <a href='/more'>
-                    <img src='icons/threedot.svg' alt='' width='25px' />
-                  </a>
-                </div>
-              </div>
-              <div className='daily-news'>
-                <div className='news'>
-                  <div className='talksonwhere'>
-                    <span className='where'>Türkiye Konumunda Gündemde</span>
-                  </div>
-                  <div className='talkswhat'>
-                    <span className='what'>
-                      <b>Akşener</b>{' '}
-                    </span>
-                  </div>
-                  <div className='howmanytweet'>
-                    <span className='howmany'>12,5 B Tweet</span>
-                  </div>
-                </div>
-                <div className='tweetmore'>
-                  <a href='/more'>
-                    <img src='icons/threedot.svg' alt='' width='25px' />
-                  </a>
-                </div>
-              </div>
-            </div>
 
-            <div className='followwho'>
-              <h4>Kimi takip etmeli</h4>
+              <div className='followwho'>
+                <h4>Kimi takip etmeli</h4>
+              </div>
             </div>
           </div>
         </div>

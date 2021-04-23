@@ -128,7 +128,8 @@
   display: flex;
 }
 .interestingimg {
-  margin-left: auto;
+  margin-left: 1%;
+  margin-top: 3%;
 }
 .tweetdiv {
   width: 86%;
@@ -226,12 +227,59 @@
 .news {
   font-size: 13px;
 }
+.rightdiv {
+  width: 114%;
+  margin-left: -23%;
+}
+.daily {
+  background: rgb(247, 249, 250);
+  margin-top: 14px;
+  border-radius: 20px;
+}
+.interesting {
+  border-bottom: 1px solid rgb(235, 238, 240);
+}
+.interestingtext {
+  font-weight: 1000;
+  font-size: 21px;
+  line-height: 120%;
+  width: 80%;
+  margin-top: 13px;
+  margin-left: 20px;
+  margin-bottom: 13px;
+}
 .daily-news {
+  border-bottom: 1px solid rgb(235, 238, 240);
   display: flex;
-  background: rgb(235, 238, 240);
-  border: 1px solid rgb(212, 215, 218);
   line-height: 2;
 }
 .tweetmore {
-  margin-left: auto;
+  margin-left: 28%;
+}
+.searchbar {
+  display: flex;
+  border: 1px solid grey;
+  border-radius: 40px;
+  background-color: rgb(235, 238, 240);
+  border-color: rgba(0, 0, 0, 0);
+  height: 49px;
+  margin-top: 2px;
+}
+#searchinput {
+  border: none;
+  background-color: rgb(235, 238, 240);
+}
+
+.where {
+  margin-left: 20px;
+}
+.what {
+  margin-left: 20px;
+  font-size: 15px;
+}
+.howmany {
+  margin-left: 20px;
+}
+.followwho {
+  margin-left: 20px;
 }
