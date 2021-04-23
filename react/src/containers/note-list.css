@@ -204,13 +204,18 @@
   display: block;
   border: 1px solid rgb(235, 238, 240);
 }
+.tweetprofileimg {
+  margin-left: 50%;
+  margin-top: 50%;
+}
 .tweetbtn {
   margin-left: 100px;
 }
 .abouttweetbtn {
   font-size: 12px;
-  margin-top: 8px;
+  margin-top: 4px;
   color: grey;
+  margin-left: 9px;
 }
 .form-control {
   border-radius: 30px;

@@ -254,7 +254,6 @@ class HomePage extends React.Component {
                         className='tweetbtn'
                       />
                     </a>
-                    <p className='abouttweetbtn'>45</p>
                   </div>
                 </div>
                 <div className='tweet'>
