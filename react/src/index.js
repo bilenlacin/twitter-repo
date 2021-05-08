@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import HomePage from './containers/HomePage';
-import Header from './components/header';
+import Header from './components/Menu';
 import './index.css';
 
 import { createStore, applyMiddleware } from 'redux';
@@ -16,7 +16,6 @@ const store = createStore(reducers, {}, applyMiddleware(thunk));
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <Header />
       <Switch>
         <Route exact path='/'>
           <HomePage />
