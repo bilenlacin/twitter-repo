@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {
-  FETCH_DATA,
+  FETCH_TWEET,
   FETCH_DATA_COMPLETE,
   FETCH_DATA_ERROR,
   INSERT_NOTE,
@@ -41,16 +41,18 @@ export const insertNote = (note) => {
   };
 };
 
-export const fetchNotes = () => {
+export const fetchTweets = () => {
   return async (dispatch) => {
-    dispatch({ type: FETCH_DATA });
+    dispatch({ type: FETCH_TWEET });
 
     try {
-      const { data } = await axios.get('http://localhost:5000/');
+      const { tweets } = await axios.get(
+        'https://twitter-33155-default-rtdb.firebaseio.com/'
+      );
 
       dispatch({
         type: FETCH_DATA_COMPLETE,
-        payload: data,
+        payload: tweets,
       });
     } catch (err) {
       dispatch({

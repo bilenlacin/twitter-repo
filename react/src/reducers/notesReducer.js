@@ -1,5 +1,5 @@
 import {
-  FETCH_DATA,
+  FETCH_TWEET,
   FETCH_DATA_COMPLETE,
   FETCH_DATA_ERROR,
   INSERT_NOTE,
@@ -15,23 +15,31 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_DATA:
-      return { loading: true, error: null, notes: [] };
+    case FETCH_TWEET:
+      return { loading: true, error: null, tweets: [] };
     case FETCH_DATA_COMPLETE:
       return { loading: false, error: null, notes: action.payload };
     case FETCH_DATA_ERROR:
       return { loading: false, notes: [], error: action.payload };
     case UPDATE_NOTE:
-      return { ...state, notes: state.notes.map(note => {
-        if (note.id.toString() === action.payload.id) {
-          return action.payload;
-        }
-        return note;
-      })};
+      return {
+        ...state,
+        notes: state.notes.map((note) => {
+          if (note.id.toString() === action.payload.id) {
+            return action.payload;
+          }
+          return note;
+        }),
+      };
     case DELETE_NOTE:
-      return { ...state, notes: state.notes.filter(note => note.id.toString() !== action.payload) };
+      return {
+        ...state,
+        notes: state.notes.filter(
+          (note) => note.id.toString() !== action.payload
+        ),
+      };
     case INSERT_NOTE:
-      return { ...state, notes: [...state.notes, action.payload]};
+      return { ...state, notes: [...state.notes, action.payload] };
     default:
       return state;
   }
