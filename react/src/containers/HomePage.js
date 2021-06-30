@@ -1,10 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import Menu from '../components/Menu';
+// import { connect } from 'react-redux';
+// import { withRouter } from 'react-router-dom';
+import Menu from './Menu';
 import './note-list.css';
 
-import Daily from '../components/Daily';
+import DailyContainer from './DailyContainer';
 import TweetContainer from './TweetContainer';
 
 class HomePage extends React.Component {
@@ -19,13 +19,12 @@ class HomePage extends React.Component {
             <TweetContainer />
           </div>
           <div class='col'>
-            <Daily />
+            <DailyContainer />
           </div>
         </div>
       </div>
     );
   }
 }
-const mapStateToProps = (state) => {};
 
-export default withRouter(connect(mapStateToProps, {})(HomePage));
+export default HomePage;

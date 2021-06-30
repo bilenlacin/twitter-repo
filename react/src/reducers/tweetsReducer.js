@@ -1,4 +1,8 @@
-import { FETCH_TWEET, FETCH_DATA_COMPLETE } from '../action-types';
+import {
+  FETCH_TWEET,
+  FETCH_DATA_COMPLETE,
+  INSERT_TWEET,
+} from '../action-types';
 
 const initialState = { tweets: [] };
 
@@ -10,6 +14,9 @@ const tweetsReducer = (state = initialState, action) => {
       return {
         tweets: action.payload,
       };
+    case INSERT_TWEET:
+      return { ...state, tweets: [...state.tweets, action.payload] };
+
     default:
       return state;
   }

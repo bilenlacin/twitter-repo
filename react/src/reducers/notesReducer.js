@@ -2,7 +2,7 @@ import {
   FETCH_TWEET,
   FETCH_DATA_COMPLETE,
   FETCH_DATA_ERROR,
-  INSERT_NOTE,
+  INSERT_TWEET,
   UPDATE_NOTE,
   DELETE_NOTE,
 } from '../action-types';
@@ -38,8 +38,8 @@ const reducer = (state = initialState, action) => {
           (note) => note.id.toString() !== action.payload
         ),
       };
-    case INSERT_NOTE:
-      return { ...state, notes: [...state.notes, action.payload] };
+    case INSERT_TWEET:
+      return { ...state, tweet: [...state.tweet, action.payload] };
     default:
       return state;
   }
