@@ -1,43 +1,55 @@
 import React, { Component } from 'react';
 
 export class Tweet extends Component {
+  showTweetImage = () => {
+    const tweet = this.props;
+    if (tweet.tweet.img) {
+      return (
+        <div className='row'>
+          <div className='col-md-12'>
+            <div className='thumbnail'>
+              <a href=''>
+                <img
+                  className='thumbnailImg'
+                  src={tweet.tweet.img}
+                  alt=''
+                  rows='6'
+                  className='tweetimage'
+                  height='100%'
+                  width='100%'
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return null;
+    }
+  };
   render() {
+    const tweet = this.props;
+    // console.log(tweet);
     return (
       <div className='tweet'>
         <div className='first-tweet'>
           <a href='/profile'>
             <img
-              src='icons/person.svg'
+              src={tweet.tweet.profileImg}
               alt=''
-              width='25'
+              width='50'
+              height='50'
               class='tweetprofileimg'
+              className='rounded-circle '
             />
           </a>
           <div className='tweetdetails'>
             <span className='username'>
-              <span>M.Serdar Kuzuloğlu </span>{' '}
-              <span class='userm'>@mserdark</span>
+              <span> {tweet.tweet.username}</span>{' '}
+              <span class='userm'>{tweet.tweet.email}</span>
             </span>
-            <p className='article'>
-              #BugünÖğrendimKi (Türkiye’de) Türkiye’nin Batı ülkelerine
-              benzemesini isteyenlerin oranı yüzde 62’den yüzde 70’e çıkarken,
-              müslüman bir ülkeye benzemesini isteyenlerin oranıysa yüzde 5’ten
-              yüzde 1’e inmiş. (
-            </p>
-            <div className='row'>
-              <div className='col-md-12'>
-                <div className='thumbnail'>
-                  <a href='/tweetimage/serdarkimage.jfif'>
-                    <img
-                      src='/tweetimage/serdarkimage.jfif'
-                      alt=''
-                      rows='6'
-                      className='tweetimage'
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
+            <p className='article'>{tweet.tweet.tweet}</p>
+            {this.showTweetImage()}
           </div>
         </div>
         <div className='btn-group'>
@@ -49,7 +61,7 @@ export class Tweet extends Component {
               className='tweetbtn'
             />
           </a>
-          <p className='abouttweetbtn'>15</p>
+          <p className='abouttweetbtn'>{tweet.tweet.retweet}</p>
           <a href='/retweet'>
             <img
               src='/icons/retweet.svg'
@@ -62,7 +74,7 @@ export class Tweet extends Component {
           <a href='/like'>
             <img src='/icons/like.svg' alt='' width='15' className='tweetbtn' />
           </a>
-          <p className='abouttweetbtn'>35</p>
+          <p className='abouttweetbtn'>{tweet.tweet.like}</p>
           <a href='/upload'>
             <img
               src='/icons/upload.svg'

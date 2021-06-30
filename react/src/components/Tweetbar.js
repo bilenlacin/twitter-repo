@@ -1,7 +1,37 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
+import { insertTweet } from '../action-creators';
 
 export class Tweetbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tweet: '',
+    };
+  }
+
+  handleTweetbarChange = (event) =>
+    this.setState({ tweet: event.target.value });
+
+  handleTweetAdded() {
+    const tweet = this.state;
+    const profils = this.props;
+    var myTweet = {
+      tweet: tweet.tweet,
+      username: profils.profils.username,
+      email: profils.profils.email,
+      profileImg: profils.profils.img,
+    };
+    this.props.insertTweet(myTweet);
+
+    this.setState({ tweet: '' });
+  }
+
   render() {
+    const tweet = this.state;
+    const profils = this.props;
+    // console.log(profils);
     return (
       <div className='tweetbar'>
         <div className='mainpagediv'>
@@ -23,12 +53,12 @@ export class Tweetbar extends Component {
               <div className='nav-img-text'>
                 <div className='nav-img'>
                   <img
-                    src='icons/person.svg'
+                    src={profils.profils.img}
                     class='rounded-circle'
                     height='45'
                     width='45'
                     alt=''
-                    style={{ background: 'rgb(175 , 185, 187)' }}
+                    // style={{ background: 'rgb(175 , 185, 187)' }}
                   />
                 </div>
               </div>
@@ -40,6 +70,7 @@ export class Tweetbar extends Component {
                 id='comment'
                 placeholder='Neler oluyor ?'
                 style={{ fontSize: '20px' }}
+                onChange={this.handleTweetbarChange}
               ></textarea>
               <div className='tweetabout'>
                 <div className='tweetaboutdiv'>
@@ -57,7 +88,9 @@ export class Tweetbar extends Component {
                   </button>
                 </div>
 
-                <button class='tweety'>Tweetle</button>
+                <button onClick={() => this.handleTweetAdded()} class='tweety'>
+                  Tweetle
+                </button>
               </div>
             </div>
           </div>

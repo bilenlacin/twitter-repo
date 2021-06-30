@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import Dailytweetnews from './Dailytweetnews';
 
 export class Dailynews extends Component {
+  dailyNewsShow() {
+    const dailyNews = this.props;
+
+    if (this.props.dailyNews) {
+      return dailyNews.dailyNews.map((dailynew) => {
+        return <Dailytweetnews dailynew={dailynew} />;
+      });
+    }
+  }
+
   render() {
     return (
       <div className='daily'>
@@ -13,11 +23,13 @@ export class Dailynews extends Component {
             </a>
           </div>
         </div>
-        <Dailytweetnews />
-        <Dailytweetnews />
-        <Dailytweetnews />
-        <Dailytweetnews />
-        <Dailytweetnews />
+        {this.dailyNewsShow()}
+
+        {/* <Dailytweetnews dailyNews={this.props.dailyNews} />
+        <Dailytweetnews dailyNews={this.props.dailyNews} />
+        <Dailytweetnews dailyNews={this.props.dailyNews} />
+        <Dailytweetnews dailyNews={this.props.dailyNews} />
+        <Dailytweetnews dailyNews={this.props.dailyNews} /> */}
       </div>
     );
   }

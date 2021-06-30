@@ -1,23 +1,26 @@
 import axios from 'axios';
 import {
-  FETCH_DATA,
+  FETCH_TWEET,
   FETCH_DATA_COMPLETE,
   FETCH_DATA_ERROR,
-  INSERT_NOTE,
-  UPDATE_NOTE,
+  INSERT_TWEET,
+  FETCH_DAILY_NEWS,
   DELETE_NOTE,
+  FETCH_IMAGE,
+  FETCH_DAILY_REQUESTED,
+  FETCH_IMAGE_REQUESTED,
 } from '../action-types';
 
-export const updateNote = (note) => {
-  return async (dispatch) => {
-    await axios.put('http://localhost:5000/' + note.id, note);
+// export const updateNote = (note) => {
+//   return async (dispatch) => {
+//     await axios.put('http://localhost:5000/' + note.id, note);
 
-    dispatch({
-      type: UPDATE_NOTE,
-      payload: note,
-    });
-  };
-};
+//     dispatch({
+//       type: UPDATE_NOTE,
+//       payload: note,
+//     });
+//   };
+// };
 
 export const deleteNote = (id) => {
   return async (dispatch) => {
@@ -30,33 +33,82 @@ export const deleteNote = (id) => {
   };
 };
 
-export const insertNote = (note) => {
+export const insertTweet = (myTweet) => {
   return async (dispatch) => {
-    await axios.post('http://localhost:5000/', note);
+    await axios.post('https://609ed01a5f32be00171ccf8c.mockapi.io/tweets', {
+      tweet: myTweet.tweet,
+      username: myTweet.username,
+      email: myTweet.email,
+      profileImg: myTweet.profileImg,
+      img: '',
+    });
 
     dispatch({
-      type: INSERT_NOTE,
-      payload: note,
+      type: INSERT_TWEET,
+      payload: myTweet,
     });
   };
 };
 
-export const fetchNotes = () => {
+export const fetchTweets = () => {
   return async (dispatch) => {
-    dispatch({ type: FETCH_DATA });
+    dispatch({ type: FETCH_TWEET });
 
-    try {
-      const { data } = await axios.get('http://localhost:5000/');
+    axios
+      .get('https://609ed01a5f32be00171ccf8c.mockapi.io/tweets')
+      .then((response) => {
+        dispatch({
+          type: FETCH_DATA_COMPLETE,
+          payload: response.data,
+        });
+      })
+      .catch((error) => {
+        dispatch({
+          type: FETCH_DATA_ERROR,
+          payload: error,
+        });
+      });
+  };
+};
 
-      dispatch({
-        type: FETCH_DATA_COMPLETE,
-        payload: data,
+export const fetchDailyNews = () => {
+  return async (dispatch) => {
+    dispatch({ type: FETCH_DAILY_REQUESTED });
+
+    axios
+      .get('https://609ed01a5f32be00171ccf8c.mockapi.io/dailyNews')
+      .then((response) => {
+        dispatch({
+          type: FETCH_DAILY_NEWS,
+          payload: response.data,
+        });
+      })
+      .catch((error) => {
+        dispatch({
+          type: FETCH_DATA_ERROR,
+          payload: error,
+        });
       });
-    } catch (err) {
-      dispatch({
-        type: FETCH_DATA_ERROR,
-        payload: err.message,
+  };
+};
+
+export const fetchProfile = () => {
+  return async (dispatch) => {
+    dispatch({ type: FETCH_IMAGE_REQUESTED });
+
+    axios
+      .get('https://609ed01a5f32be00171ccf8c.mockapi.io/profileimg')
+      .then((response) => {
+        dispatch({
+          type: FETCH_IMAGE,
+          payload: response.data,
+        });
+      })
+      .catch((error) => {
+        dispatch({
+          type: FETCH_DATA_ERROR,
+          payload: error,
+        });
       });
-    }
   };
 };
