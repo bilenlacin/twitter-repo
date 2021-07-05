@@ -14,7 +14,11 @@ export class Tweetbar extends Component {
   handleTweetbarChange = (event) =>
     this.setState({ tweet: event.target.value });
 
+<<<<<<< HEAD
   handleTweetAdded = () => {
+=======
+  handleTweetAdded() {
+>>>>>>> c2884ededbe4fd49e717ff353b57a6c3d11170cf
     const tweet = this.state;
     const profils = this.props;
     var myTweet = {
@@ -23,6 +27,7 @@ export class Tweetbar extends Component {
       email: profils.profils.email,
       profileImg: profils.profils.img,
     };
+<<<<<<< HEAD
 
     this.props.insertTweet(myTweet);
 
@@ -30,6 +35,15 @@ export class Tweetbar extends Component {
   };
 
   render() {
+=======
+    this.props.insertTweet(myTweet);
+
+    this.setState({ tweet: '' });
+  }
+
+  render() {
+    const tweet = this.state;
+>>>>>>> c2884ededbe4fd49e717ff353b57a6c3d11170cf
     const profils = this.props;
     // console.log(profils);
     return (
@@ -71,7 +85,10 @@ export class Tweetbar extends Component {
                 placeholder='Neler oluyor ?'
                 style={{ fontSize: '20px' }}
                 onChange={this.handleTweetbarChange}
+<<<<<<< HEAD
                 value={this.state.tweet}
+=======
+>>>>>>> c2884ededbe4fd49e717ff353b57a6c3d11170cf
               ></textarea>
               <div className='tweetabout'>
                 <div className='tweetaboutdiv'>

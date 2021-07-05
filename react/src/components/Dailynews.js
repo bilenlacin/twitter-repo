@@ -24,6 +24,15 @@ export class Dailynews extends Component {
           </div>
         </div>
         {this.dailyNewsShow()}
+<<<<<<< HEAD
+=======
+
+        {/* <Dailytweetnews dailyNews={this.props.dailyNews} />
+        <Dailytweetnews dailyNews={this.props.dailyNews} />
+        <Dailytweetnews dailyNews={this.props.dailyNews} />
+        <Dailytweetnews dailyNews={this.props.dailyNews} />
+        <Dailytweetnews dailyNews={this.props.dailyNews} /> */}
+>>>>>>> c2884ededbe4fd49e717ff353b57a6c3d11170cf
       </div>
     );
   }
