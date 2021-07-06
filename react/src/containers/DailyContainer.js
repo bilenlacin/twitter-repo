@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-<<<<<<< HEAD
 import { fetchDailyNews, filterTweets } from '../action-creators';
-=======
-import { fetchDailyNews } from '../action-creators';
->>>>>>> c2884ededbe4fd49e717ff353b57a6c3d11170cf
 
 import Search from '../components/Search';
 import Dailynews from '../components/Dailynews';
@@ -19,11 +15,7 @@ export class DailyContainer extends Component {
   render() {
     return (
       <div className='rightdiv'>
-<<<<<<< HEAD
         <Search filterTweets={this.props.filterTweets} />
-=======
-        <Search />
->>>>>>> c2884ededbe4fd49e717ff353b57a6c3d11170cf
         <Dailynews dailyNews={this.props.dailyNews} />
 
         <div className='followwho'>
@@ -42,9 +34,6 @@ const mapStateToProps = (state) => {
 export default withRouter(
   connect(mapStateToProps, {
     fetchDailyNews: fetchDailyNews,
-<<<<<<< HEAD
     filterTweets: filterTweets,
-=======
->>>>>>> c2884ededbe4fd49e717ff353b57a6c3d11170cf
   })(DailyContainer)
 );

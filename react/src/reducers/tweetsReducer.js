@@ -2,10 +2,7 @@ import {
   FETCH_TWEET,
   FETCH_DATA_COMPLETE,
   INSERT_TWEET,
-<<<<<<< HEAD
   FILTER_TWEETS,
-=======
->>>>>>> c2884ededbe4fd49e717ff353b57a6c3d11170cf
 } from '../action-types';
 
 const initialState = { tweets: [] };
@@ -20,7 +17,6 @@ const tweetsReducer = (state = initialState, action) => {
       };
     case INSERT_TWEET:
       return { ...state, tweets: [...state.tweets, action.payload] };
-<<<<<<< HEAD
     case FILTER_TWEETS:
       return {
         ...state,
@@ -28,8 +24,6 @@ const tweetsReducer = (state = initialState, action) => {
           tweet.tweet.toLowerCase().includes(action.payload.text.toLowerCase())
         ),
       };
-=======
->>>>>>> c2884ededbe4fd49e717ff353b57a6c3d11170cf
 
     default:
       return state;

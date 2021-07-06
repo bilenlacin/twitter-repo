@@ -9,11 +9,8 @@ import {
   FETCH_IMAGE,
   FETCH_DAILY_REQUESTED,
   FETCH_IMAGE_REQUESTED,
-<<<<<<< HEAD
   FILTER_TWEETS,
   // FILTER_TWEET_ARRAY,
-=======
->>>>>>> c2884ededbe4fd49e717ff353b57a6c3d11170cf
 } from '../action-types';
 
 // export const updateNote = (note) => {
@@ -58,7 +55,6 @@ export const insertTweet = (myTweet) => {
 export const fetchTweets = () => {
   return async (dispatch) => {
     dispatch({ type: FETCH_TWEET });
-<<<<<<< HEAD
 
     axios
       .get('https://609ed01a5f32be00171ccf8c.mockapi.io/tweets')
@@ -91,15 +87,6 @@ export const filterTweets = (text) => {
           type: FILTER_TWEETS,
           payload: text,
         });
-=======
-
-    axios
-      .get('https://609ed01a5f32be00171ccf8c.mockapi.io/tweets')
-      .then((response) => {
-        dispatch({
-          type: FETCH_DATA_COMPLETE,
-          payload: response.data,
-        });
       })
       .catch((error) => {
         dispatch({
@@ -121,7 +108,6 @@ export const fetchDailyNews = () => {
           type: FETCH_DAILY_NEWS,
           payload: response.data,
         });
->>>>>>> c2884ededbe4fd49e717ff353b57a6c3d11170cf
       })
       .catch((error) => {
         dispatch({
@@ -132,30 +118,6 @@ export const fetchDailyNews = () => {
   };
 };
 
-<<<<<<< HEAD
-export const fetchDailyNews = () => {
-  return async (dispatch) => {
-    dispatch({ type: FETCH_DAILY_REQUESTED });
-
-    axios
-      .get('https://609ed01a5f32be00171ccf8c.mockapi.io/dailyNews')
-      .then((response) => {
-        dispatch({
-          type: FETCH_DAILY_NEWS,
-          payload: response.data,
-        });
-      })
-      .catch((error) => {
-        dispatch({
-          type: FETCH_DATA_ERROR,
-          payload: error,
-        });
-      });
-  };
-};
-
-=======
->>>>>>> c2884ededbe4fd49e717ff353b57a6c3d11170cf
 export const fetchProfile = () => {
   return async (dispatch) => {
     dispatch({ type: FETCH_IMAGE_REQUESTED });
