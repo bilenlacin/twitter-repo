@@ -10,24 +10,11 @@ import {
   FETCH_DAILY_REQUESTED,
   FETCH_IMAGE_REQUESTED,
   FILTER_TWEETS,
-  // FILTER_TWEET_ARRAY,
 } from '../action-types';
-
-// export const updateNote = (note) => {
-//   return async (dispatch) => {
-//     await axios.put('http://localhost:5000/' + note.id, note);
-
-//     dispatch({
-//       type: UPDATE_NOTE,
-//       payload: note,
-//     });
-//   };
-// };
 
 export const deleteNote = (id) => {
   return async (dispatch) => {
     await axios.delete('http://localhost:5000/' + id);
-
     dispatch({
       type: DELETE_NOTE,
       payload: id,

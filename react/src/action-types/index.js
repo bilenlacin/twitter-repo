@@ -9,4 +9,3 @@ export const UPDATE_NOTE = 'update_note';
 export const FETCH_IMAGE = 'fetch_image';
 export const FETCH_DAILY_REQUESTED = 'fetch_daily_requested';
 export const FETCH_IMAGE_REQUESTED = 'fetch_image_requested';
-// export const FILTER_TWEET_ARRAY = 'filter_tweet_array';

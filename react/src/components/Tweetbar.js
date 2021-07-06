@@ -23,9 +23,7 @@ export class Tweetbar extends Component {
       email: profils.profils.email,
       profileImg: profils.profils.img,
     };
-
     this.props.insertTweet(myTweet);
-
     this.setState({ tweet: '' });
   };
 

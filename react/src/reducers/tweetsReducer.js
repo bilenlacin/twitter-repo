@@ -24,7 +24,6 @@ const tweetsReducer = (state = initialState, action) => {
           tweet.tweet.toLowerCase().includes(action.payload.text.toLowerCase())
         ),
       };
-
     default:
       return state;
   }

@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { fetchDailyNews, filterTweets } from '../action-creators';
-
 import Search from '../components/Search';
 import Dailynews from '../components/Dailynews';
-// import { fireEvent } from '@testing-library/dom';
+import { fireEvent } from '@testing-library/dom';
 
 export class DailyContainer extends Component {
   componentDidMount() {
@@ -17,7 +16,6 @@ export class DailyContainer extends Component {
       <div className='rightdiv'>
         <Search filterTweets={this.props.filterTweets} />
         <Dailynews dailyNews={this.props.dailyNews} />
-
         <div className='followwho'>
           <h4>Kimi takip etmeli</h4>
         </div>
