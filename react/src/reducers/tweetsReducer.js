@@ -18,9 +18,7 @@ const tweetsReducer = (state = initialState, action) => {
     case INSERT_TWEET:
       return { ...state, tweets: [...state.tweets, action.payload] };
     case FILTER_TWEETS:
-      return {
-        tweets: action.payload,
-      };
+      return { ...state, tweets: action.payload.tweets };
 
     default:
       return state;
