@@ -12,9 +12,10 @@ export class DailyContainer extends Component {
   }
 
   render() {
+    const { tweets } = this.props;
     return (
       <div className='rightdiv'>
-        <Search filterTweets={this.props.filterTweets} />
+        <Search filterTweets={this.props.filterTweets} tweets={tweets} />
         <Dailynews dailyNews={this.props.dailyNews} />
         <div className='followwho'>
           <h4>Kimi takip etmeli</h4>
@@ -25,8 +26,9 @@ export class DailyContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const dailyNews = state.daily;
-  return dailyNews;
+  const { dailyNews } = state.daily;
+  const { tweets } = state.tweets;
+  return { dailyNews, tweets };
 };
 
 export default withRouter(

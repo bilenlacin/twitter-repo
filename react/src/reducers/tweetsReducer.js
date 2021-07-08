@@ -19,11 +19,9 @@ const tweetsReducer = (state = initialState, action) => {
       return { ...state, tweets: [...state.tweets, action.payload] };
     case FILTER_TWEETS:
       return {
-        ...state,
-        tweets: state.tweets.map((tweet) =>
-          tweet.tweet.toLowerCase().includes(action.payload.text.toLowerCase())
-        ),
+        tweets: action.payload,
       };
+
     default:
       return state;
   }

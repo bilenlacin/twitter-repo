@@ -67,14 +67,15 @@ export const filterTweets = (text) => {
       .get('https://609ed01a5f32be00171ccf8c.mockapi.io/tweets')
       .then((response) => {
         dispatch({
-          type: FETCH_DATA_COMPLETE,
-          payload: response.data,
-        });
-        dispatch({
           type: FILTER_TWEETS,
-          payload: text,
+          payload: {
+            tweets: response.data.filter((tweet) =>
+              tweet.tweet.toLowerCase().indexOf(text.text.toLowerCase())
+            ),
+          },
         });
       })
+
       .catch((error) => {
         dispatch({
           type: FETCH_DATA_ERROR,

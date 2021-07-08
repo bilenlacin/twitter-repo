@@ -13,6 +13,7 @@ export class Search extends Component {
   };
   onClick = () => {
     const text = this.state;
+    const tweets = this.props;
     this.props.filterTweets(text);
   };
   render() {
