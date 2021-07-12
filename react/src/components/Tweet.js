@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 
 export class Tweet extends Component {
+  increaseLike = () => {
+    const tweet = this.props;
+    const tweetId = tweet.tweet.id;
+    const tweetCounter = tweet.tweet.like + 1;
+    this.props.increaseTweetLike(tweetId, tweetCounter);
+  };
   showTweetImage = () => {
     const tweet = this.props;
     if (tweet.tweet.img) {
@@ -71,9 +77,15 @@ export class Tweet extends Component {
             />
           </a>
           <p className='abouttweetbtn'>25</p>
-          <a href='/like'>
-            <img src='/icons/like.svg' alt='' width='15' className='tweetbtn' />
-          </a>
+
+          <img
+            src='/icons/like.svg'
+            alt=''
+            width='15'
+            className='tweetbtn'
+            onClick={this.increaseLike}
+          />
+
           <p className='abouttweetbtn'>{tweet.tweet.like}</p>
           <a href='/upload'>
             <img

@@ -4,7 +4,6 @@ import { withRouter } from 'react-router';
 import { fetchDailyNews, filterTweets } from '../action-creators';
 import Search from '../components/Search';
 import Dailynews from '../components/Dailynews';
-import { fireEvent } from '@testing-library/dom';
 
 export class DailyContainer extends Component {
   componentDidMount() {

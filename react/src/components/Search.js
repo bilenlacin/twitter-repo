@@ -16,6 +16,13 @@ export class Search extends Component {
     const tweets = this.props;
     this.props.filterTweets(text);
   };
+  onSubmit = (event) => {
+    if (event.key === 'Enter') {
+      const text = this.state;
+      const tweets = this.props;
+      this.props.filterTweets(text);
+    }
+  };
   render() {
     return (
       <div className='search'>
@@ -36,6 +43,7 @@ export class Search extends Component {
             aria-label='search'
             value={this.state.text}
             onChange={this.onChange}
+            onKeyUp={this.onSubmit}
           />
         </div>
       </div>

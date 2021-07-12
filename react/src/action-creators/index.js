@@ -10,6 +10,7 @@ import {
   FETCH_DAILY_REQUESTED,
   FETCH_IMAGE_REQUESTED,
   FILTER_TWEETS,
+  INCREASE_TWEET_LIKE,
 } from '../action-types';
 
 export const deleteNote = (id) => {
@@ -69,13 +70,11 @@ export const filterTweets = (text) => {
         dispatch({
           type: FILTER_TWEETS,
           payload: {
-            tweets: response.data.filter((tweet) =>
-              tweet.tweet.toLowerCase().indexOf(text.text.toLowerCase())
-            ),
+            tweets: response.data,
+            text: text,
           },
         });
       })
-
       .catch((error) => {
         dispatch({
           type: FETCH_DATA_ERROR,
@@ -124,5 +123,23 @@ export const fetchProfile = () => {
           payload: error,
         });
       });
+  };
+};
+
+export const increaseTweetLike = (tweetId, tweetCounter) => {
+  return async (dispatch) => {
+    await axios.put(
+      'https://609ed01a5f32be00171ccf8c.mockapi.io/tweets/' + tweetId,
+      {
+        like: tweetCounter,
+      }
+    );
+    dispatch({
+      type: INCREASE_TWEET_LIKE,
+      payload: {
+        tweetId,
+        tweetCounter,
+      },
+    });
   };
 };

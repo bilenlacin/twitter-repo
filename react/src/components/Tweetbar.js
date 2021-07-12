@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
-import { insertTweet } from '../action-creators';
 
 export class Tweetbar extends Component {
   constructor(props) {
