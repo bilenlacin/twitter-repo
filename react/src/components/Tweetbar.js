@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
-import { insertTweet } from '../action-creators';
 
 export class Tweetbar extends Component {
   constructor(props) {
@@ -14,7 +11,7 @@ export class Tweetbar extends Component {
   handleTweetbarChange = (event) =>
     this.setState({ tweet: event.target.value });
 
-  handleTweetAdded() {
+  handleTweetAdded = () => {
     const tweet = this.state;
     const profils = this.props;
     var myTweet = {
@@ -24,12 +21,10 @@ export class Tweetbar extends Component {
       profileImg: profils.profils.img,
     };
     this.props.insertTweet(myTweet);
-
     this.setState({ tweet: '' });
-  }
+  };
 
   render() {
-    const tweet = this.state;
     const profils = this.props;
     // console.log(profils);
     return (
@@ -71,6 +66,7 @@ export class Tweetbar extends Component {
                 placeholder='Neler oluyor ?'
                 style={{ fontSize: '20px' }}
                 onChange={this.handleTweetbarChange}
+                value={this.state.tweet}
               ></textarea>
               <div className='tweetabout'>
                 <div className='tweetaboutdiv'>

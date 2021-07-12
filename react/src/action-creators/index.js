@@ -9,23 +9,13 @@ import {
   FETCH_IMAGE,
   FETCH_DAILY_REQUESTED,
   FETCH_IMAGE_REQUESTED,
+  FILTER_TWEETS,
+  INCREASE_TWEET_LIKE,
 } from '../action-types';
-
-// export const updateNote = (note) => {
-//   return async (dispatch) => {
-//     await axios.put('http://localhost:5000/' + note.id, note);
-
-//     dispatch({
-//       type: UPDATE_NOTE,
-//       payload: note,
-//     });
-//   };
-// };
 
 export const deleteNote = (id) => {
   return async (dispatch) => {
     await axios.delete('http://localhost:5000/' + id);
-
     dispatch({
       type: DELETE_NOTE,
       payload: id,
@@ -60,6 +50,29 @@ export const fetchTweets = () => {
         dispatch({
           type: FETCH_DATA_COMPLETE,
           payload: response.data,
+        });
+      })
+      .catch((error) => {
+        dispatch({
+          type: FETCH_DATA_ERROR,
+          payload: error,
+        });
+      });
+  };
+};
+export const filterTweets = (text) => {
+  return async (dispatch) => {
+    dispatch({ type: FETCH_TWEET });
+
+    axios
+      .get('https://609ed01a5f32be00171ccf8c.mockapi.io/tweets')
+      .then((response) => {
+        dispatch({
+          type: FILTER_TWEETS,
+          payload: {
+            tweets: response.data,
+            text: text,
+          },
         });
       })
       .catch((error) => {
@@ -110,5 +123,23 @@ export const fetchProfile = () => {
           payload: error,
         });
       });
+  };
+};
+
+export const increaseTweetLike = (tweetId, tweetCounter) => {
+  return async (dispatch) => {
+    await axios.put(
+      'https://609ed01a5f32be00171ccf8c.mockapi.io/tweets/' + tweetId,
+      {
+        like: tweetCounter,
+      }
+    );
+    dispatch({
+      type: INCREASE_TWEET_LIKE,
+      payload: {
+        tweetId,
+        tweetCounter,
+      },
+    });
   };
 };

@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { fetchTweets, insertTweet, fetchProfile } from '../action-creators';
+import {
+  fetchTweets,
+  insertTweet,
+  fetchProfile,
+  increaseTweetLike,
+} from '../action-creators';
 import Tweetbar from '../components/Tweetbar';
 import Tweet from '../components/Tweet';
-import profileReducer from '../reducers/profileReducer';
+
 // import { fireEvent } from '@testing-library/dom';
 
 export class TweetContainer extends Component {
@@ -18,13 +23,15 @@ export class TweetContainer extends Component {
       return;
     }
     return tweets.map((tweet) => {
-      return <Tweet tweet={tweet} />;
+      return (
+        <Tweet tweet={tweet} increaseTweetLike={this.props.increaseTweetLike} />
+      );
     });
   };
 
   profilePush = () => {
     const profile = this.props;
-    if (this.props.profile.length != 0) {
+    if (this.props.profile.length !== 0) {
       return profile.profile.map((profils) => {
         return (
           <Tweetbar profils={profils} insertTweet={this.props.insertTweet} />
@@ -55,5 +62,6 @@ export default withRouter(
     fetchTweets: fetchTweets,
     insertTweet: insertTweet,
     fetchProfile: fetchProfile,
+    increaseTweetLike: increaseTweetLike,
   })(TweetContainer)
 );
